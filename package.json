@@ -1,5 +1,5 @@
 {
-  "name": "testing-tutorial",
+  "name": "youtube-react-testing-video3-introduction-jest-react-testing-library",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,8 +8,9 @@
     "start": "next start",
     "lint": "next lint --dir src",
     "test": "jest",
-    "test:ci": "jest --coverage --silent --detectOpenHandles --ci",
+    "test:ci": "jest --coverage --silent --ci",
     "prepare": "husky install",
+    "prettier": "prettier {*,src/*,src/**/*} --write --ignore-unknown",
     "lint-staged": "lint-staged"
   },
   "dependencies": {
@@ -18,10 +19,10 @@
     "react-dom": "18.0.0"
   },
   "devDependencies": {
-    "@testing-library/dom": "^8.12.0",
-    "@testing-library/jest-dom": "^5.16.3",
-    "@testing-library/react": "^13.0.0",
-    "@testing-library/user-event": "^14.0.3",
+    "@testing-library/dom": "8.12.0",
+    "@testing-library/jest-dom": "5.16.3",
+    "@testing-library/react": "13.0.0",
+    "@testing-library/user-event": "14.0.4",
     "@types/jest": "^27.4.1",
     "@types/node": "17.0.23",
     "@types/react": "17.0.43",
@@ -33,14 +34,15 @@
     "eslint-plugin-jest": "^26.1.3",
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-testing-library": "^5.2.0",
-    "jest": "^27.5.1",
-    "lint-staged": "^12.3.7",
+    "husky": "7.0.4",
+    "jest": "27.5.1",
+    "lint-staged": "12.3.7",
     "prettier": "^2.6.1",
     "ts-jest": "^27.1.4",
     "typescript": "^4.6.3"
   },
   "lint-staged": {
-    "*.(ts|tsx)": "eslint --cache --fix",
+    "*.(tsx|ts)": "eslint --cache --fix",
     "*": "prettier --write --ignore-unknown"
   }
 }
